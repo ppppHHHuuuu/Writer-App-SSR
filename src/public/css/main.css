@@ -1,0 +1,10 @@
+body {
+  background-color: antiquewhite;
+  box-sizing: border-box;
+}
+body header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body main section nav ul li {
+  display: block;
+}

@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="doc-title" id="doc-title"><%= typeof doc_title != 'undefined' ? doc_title:'New file'%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/doc.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="doc-manage">
+    <div class="doc-name" id="doc-name">
+        <input type="text" class="doc-name-input" id="doc-name-input" placeholder="Untittled Doc">
+    </div>
+
+    <div class="doc-menu-row">
+        <div class="save" id="save" >
+            <button class="file-btn" id="file-btn" type="button">File</button>
+            
+        </div>
+        <div class="file">
+            <button class="save-btn" id="save-btn" >Save</button>
+            <div class="dropdown-menu">
+            </div>
+        </div>
+    </div>
+
+    <div class="doc-text-editor">
+        <button class="opt-btn-em">
+            <i class="fa fa-bold"></i>
+        </button>
+
+        <button class="opt-btn-em">
+            <i class="fa fa-italic"></i>
+        </button>
+        
+        <!-- TODO: JS for fontSize-->
+        <button class="opt-btn-em">
+            <i class="fa fa-expand" id="grow-txt"></i>
+        </button>
+
+        <button class="opt-btn-em">
+            <i class="fa fa-compress" id="shrink-txt"></i>
+        </button>
+
+        <span class="opt-btn-em">
+            <select class="font-name" id="font-name" >
+                <option value="Times ">Times New Roman</option>
+            </select>
+            <select  class="font-size" id="font-size">
+                <!-- TODO: CREATE OPTIONS HERE -->
+                <option value="1">1</option>
+            </select>
+        </span>
+
+        
+        <!--  TODO: JS for effect-->
+        <!-- <button class="opt-btn-decor" id="highlight">
+            <i class=""></i>
+        </button> -->
+        <button class="opt-btn-decor" id="underline">
+            <i class="fa fa-underline"></i>
+        </button>
+
+        <button class="opt-btn-decor" id="strikethrough">
+            <i class="fa fa-strikethrough"></i>
+        </button>
+
+        
+        <button class="opt-btn-do">
+            <i class="fa fa-undo"></i>
+        </button>
+
+        <button class="opt-btn-do">
+            
+            <i class="fa fa-rotate-right"></i>
+        </button>
+
+        <button class="opt-btn-spacing">
+            <i class="fa fa-indent"></i>
+        </button>
+
+        <button class="opt-btn-adv">
+            <i class="fa fa-link"></i>   
+        </button>
+        
+        <button class="opt-btn-adv">
+            <i class="fa fa-unlink"></i>   
+        </button>
+
+        <button class="opt-btn-align" id="justifyLeft">
+            <i class="fa fa-align-left"></i>
+        </button>
+        <button class="opt-btn-align" id="justifyCenter">
+            <i class="fa fa-align-center"></i>
+        </button>
+        <button class="opt-btn-align" id="justifyRight">
+            <i class="fa fa-align-right"></i>
+        </button>
+        <button class="opt-btn-align" id="justifyFull">
+            <i class="fa fa-align-justify"></i>
+        </button>
+
+    </div>
+    <br>
+    <div class="text-div">
+        <textarea class="text-field" id="text-field"placeholder="Type here"> 
+        </textarea>
+    </div>
+</div>
+    <!-- <script>
+        fetch().then(res){
+            document.title = ress.title
+        }
+        //fetch goi den backend
+    </script> -->
+    <script src="/js/doc.js"></script>
+</body>
+</html>

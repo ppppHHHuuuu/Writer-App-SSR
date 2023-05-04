@@ -1,0 +1,19 @@
+body {
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    header {
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    main {
+        section {
+            nav {
+                ul {
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
