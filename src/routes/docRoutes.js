@@ -1,7 +1,7 @@
 const express = require('express');
 const docRouter = express.Router();
 const {getDocPage, postName} = require('../controllers/docController');
-
+const {Blog} = require('../models/blog');
 const validation= (req, res, next) => {
     const {title, doc} = req.body;
     if (!title) {
@@ -14,12 +14,11 @@ const validation= (req, res, next) => {
         next();
     }
 }
-
-const sendToLocalStorage = (req, res, next) => {
-    const {title, doc} = req.body;
-    localStorage.setItem(title, doc);
-    res.send('stored ok');
-    next();    
+async function createBlog(title, content) {
+    Blog.create({
+        title: title,
+        content: content
+    })
 }
 docRouter
     .get('/:id', (req, res) => {
@@ -29,11 +28,8 @@ docRouter
 docRouter
     .post('/:id', validation, (req, res) => {
         const {title, doc} = req.body;
-
+        createBlog(title, doc);
         res.send( {'data': 'data sent to server ok'});
         console.log('data sent from server:'+  title + " " + doc); 
 })
-
-// router.route('/:id')
-    
 module.exports = docRouter;

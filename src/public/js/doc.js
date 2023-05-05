@@ -1,4 +1,4 @@
-const url = "http://localhost:8086"
+const url = "http://localhost:8086/doc/:id"
 
 const saveButton = document.getElementById('save-btn');
 
@@ -23,7 +23,6 @@ async function updateDocList() {
         console.log("server receive status:"+ JSON.stringify(data));
     }
     else {
-        
         console.log('Error' + JSON.stringify(data));
     }
 }
