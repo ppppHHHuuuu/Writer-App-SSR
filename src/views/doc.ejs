@@ -3,14 +3,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="doc-title" id="doc-title"><%= typeof doc_title != 'undefined' ? doc_title:'New file'%></title>
+    <title class="doc-title" id="doc-title"><%=typeof doc_title != 'undefined' ? doc_title:'New file'%></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/doc.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="doc-manage">
     <div class="doc-name" id="doc-name">
-        <input type="text" class="doc-name-input" id="doc-name-input" placeholder="Untittled Doc">
+        <input type="text" class="doc-name-input" id="doc-name-input" placeholder="Untitled" value=<%- title.replace(/ /g, "&nbsp;") %>>
     </div>
 
     <div class="doc-menu-row">
@@ -104,7 +104,7 @@
     </div>
     <br>
     <div class="text-div">
-        <textarea class="text-field" id="text-field"placeholder="Type here"> 
+        <textarea class="text-field" id="text-field"placeholder="Type here"><%=doc%>
         </textarea>
     </div>
 </div>

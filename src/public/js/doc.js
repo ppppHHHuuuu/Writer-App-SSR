@@ -1,14 +1,15 @@
 const url = "http://localhost:8086/doc/:id"
-
 const saveButton = document.getElementById('save-btn');
 
-saveButton.addEventListener('click', updateDocList );
+saveButton.addEventListener('click', updateDocList);
+
+
 
 async function updateDocList() {
     const title = document.getElementById('doc-name-input').value;
     const doc = document.getElementById('text-field').value;
     console.log("title: " + title)
-    console.log("document: " + doc)
+    console.log("document: " + doc);
 
     const response = await fetch(url, {
         method: "POST",
@@ -17,7 +18,8 @@ async function updateDocList() {
         },
         body: JSON.stringify({title, doc})//"{"title"}"
     })
-    const data = await response.json();
+    const data = response;
+    console.log("data: " + data)
     if (response.ok) {
         
         console.log("server receive status:"+ JSON.stringify(data));
@@ -26,3 +28,4 @@ async function updateDocList() {
         console.log('Error' + JSON.stringify(data));
     }
 }
+

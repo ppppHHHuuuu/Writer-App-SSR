@@ -1,0 +1,14 @@
+@use '../small-detail/curve.scss';
+
+@mixin button-size {
+    width: 100px;
+    height: 30px;
+}
+
+@mixin button-shape {
+    border-radius: 10px;
+    border: transparent;
+    &:hover {
+        border: curve.$buttonCurve;
+    }
+}

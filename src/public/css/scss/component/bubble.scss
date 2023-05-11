@@ -1,0 +1,15 @@
+@use "../small-detail/curve.scss";
+@mixin size {
+    display: block;
+    width: 30%;
+    height: 150px;
+}  
+@mixin border {
+    @include curve.buttonCurve;
+}
+
+@mixin smallerSize {
+    display: block;
+    width: 100px;
+    height: 100px;
+}

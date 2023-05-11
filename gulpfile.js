@@ -9,6 +9,8 @@ gulp.task('sass', async () => {
 
 gulp.task('watch', async () => {
     gulp.watch('./src/public/css/scss/*.scss').on('change', gulp.series('sass'));
+    gulp.watch('./src/public/css/scss/**/*.scss').on('change', gulp.series('sass'));
+
 })
 
 gulp.task('default', gulp.series(['sass', 'watch']));

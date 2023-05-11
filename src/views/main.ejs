@@ -1,24 +1,80 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
-    <header>
-        <h1>Files</h1>
-    </header>
-    <main>
-        <section>
-            <nav class="file-list-container">
-                <ul id="file-list-ul">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Main Page</title>
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Files</h1>
+        </header>
+        <main>
+            <div class="column" id="column-1">
+                <section class="categories">       
+                    <nav>
+                        <h2>Category</h2>
+                        <div>
+                            <ul id="categories-list-ul">
+                                <% for (var item = 0; item < categoriesList.length; item++) { %>
+                                <a class="link">
+                                    <div class="page-title"><%= categoriesList[item] %> </div>
+                                </a>
+                                <% }; %>
+                            </ul>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+
+            <div class="column" id="column-2">
+                <h2>Feed</h2>
+                <section class="file-list">
                     
-                </ul>
-            </nav>
-        </section>
-    </main>
-    <script type="module" src="/main/main.js"></script>
-</body>
+                    <nav class="file-list-container">
+                        <div class="content-table">
+                            <ul id="file-list-ul">
+                                <% for (var item = 0; item < titleList.length; item++) { %>
+                                <a class="link">
+                                    <span class="page-title"><%= titleList[item] %> </span>
+                                </a>
+                                <% }; %>
+                            </ul>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+
+            <div class="column" id="column-3">
+                <section id="profile">
+                    <div class="avatar">
+                        <img src="./img/face.jpg" alt="profile pic" />
+                    </div>
+                    <div class="quote">
+                        <textarea>
+                            I know how to do things
+                        </textarea>
+                    </div>
+                </section>
+                <section id="posts">
+                    <h2>Template</h2>
+                    <section class="template-list">
+                        <nav class="template-list-container">
+                            <div>
+                                <ul id="template-list-ul">
+                                    <% for (var item = 0; item < templatesList.length; item++) { %>
+                                    <a class="link">
+                                        <span class="template-title"><%= templatesList[item] %> </span>
+                                    </a>
+                                    <% }; %>
+                                </ul>
+                            </div>
+                        </nav>
+                    </section>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="/js/main.js"></script>
+    </body>
 </html>

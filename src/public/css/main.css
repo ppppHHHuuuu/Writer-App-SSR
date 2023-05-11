@@ -1,10 +1,151 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  background-color: antiquewhite;
+  position: absolute;
   box-sizing: border-box;
+  font-family: "Gilroy";
+  background-color: rgb(238, 250, 245);
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 90vmax;
+  height: 60vmin;
 }
 body header {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gilroy SemiBold";
 }
-body main section nav ul li {
+body main {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: inherit;
+}
+body main div#column-1 {
+  padding-left: 20px;
+  flex-grow: 1;
+  width: 25%;
+}
+body main div#column-1 .categories nav div {
+  max-height: 100px;
+  overflow-y: scroll;
+}
+body main div#column-1 .categories nav div ul#categories-list-ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 0px;
+  margin-left: -13px;
+}
+body main div#column-2 {
+  margin-left: 20px;
+  flex-grow: 2;
+  max-width: 50%;
+  max-height: 80%;
+}
+body main div#column-2 .file-list {
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+body main div#column-2 .file-list nav div {
+  border-radius: 30px;
+  overflow-y: scroll;
+  width: 95%;
+  height: 100%;
+}
+body main div#column-2 .file-list nav div ul {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+1) {
+  background: #6692d4;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+2) {
+  background: #6692d4;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+3) {
+  background: white;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+4) {
+  background: white;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+5) {
+  background: #f8c7ac;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+6) {
+  background: #f8c7ac;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+7) {
+  background: #6692d4;
+}
+body main div#column-2 .file-list nav div ul a:nth-child(3n+8) {
+  background: #f8c7ac;
+}
+body main div#column-2 .file-list nav div ul a {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: block;
+  width: 30%;
+  height: 150px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+body main div#column-2 .file-list nav div ul a span {
+  position: relative;
+  font-size: smaller;
+  word-wrap: break-word;
+  padding: 30px;
+}
+body main div#column-3 {
+  margin-left: 20px;
+  flex-grow: 1;
+  width: 25%;
+}
+body main div#column-3 #profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 20px;
+  min-height: 30%;
+}
+body main div#column-3 #profile div.avatar img {
+  overflow: hidden;
+  max-width: 20%;
+  border-radius: 30px;
+}
+body main div#column-3 #profile div.quote textarea {
+  background: rgb(209, 250, 244);
+  border-radius: 20px;
+}
+body main div#column-3 section#posts section.template-list nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body main div#column-3 section#posts section.template-list nav div {
+  width: 100%;
+}
+body main div#column-3 section#posts section.template-list nav div ul#template-list-ul {
+  overflow-y: scroll;
+  border-radius: 20px;
+  max-height: 50%;
+  padding-left: 0px;
+}
+body main div#column-3 section#posts section.template-list nav div ul#template-list-ul a {
+  text-align: center;
+  background: #acc7f1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
 }

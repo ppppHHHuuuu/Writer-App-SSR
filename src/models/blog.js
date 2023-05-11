@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const { sequelize } = require('../config/databaseConfig');
+const { sequelize } = require('../database/database.js');
 
 // Define the User model
 const Blog = sequelize.define('Blog', {
@@ -10,7 +10,8 @@ const Blog = sequelize.define('Blog', {
   },
   title: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    
   },
   content: {
     type: DataTypes.STRING,
@@ -21,17 +22,3 @@ const Blog = sequelize.define('Blog', {
 
 module.exports = {Blog};
 
-// // export {Blog}
-// // // Synchronize the model with the database
-// // sequelize.sync()
-// //   .then(() => console.log('User model synchronized with database'))
-// //   .catch(err => console.error(err));
-
-// // // Create a new user
-// // const newUser = User.create({
-// //   name: 'John Doe',
-// //   email: 'johndoe@example.com',
-// //   password: 'password'
-// // })
-// //   .then(user => console.log(user))
-// //   .catch(err => console.error(err));
